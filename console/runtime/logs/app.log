@@ -1,0 +1,138 @@
+2016-01-26 11:14:36 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Command.php(216): yii\db\Connection->getSlavePdo()
+#5 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->prepare(true)
+#6 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#17 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#18 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#19 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Users/Rio-hl/Documents/wwwroot/testlee/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Command.php(216): yii\db\Connection->getSlavePdo()
+#3 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->prepare(true)
+#4 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#15 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#16 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#17 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Users/Rio-hl/Documents/wwwroot/testlee/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-01-26 11:14:36 [-][-][-][info][application] $_SERVER = [
+    'TERM' => 'xterm-256color'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.6WHZYRBCC6/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x0:25:52'
+    'PATH' => '/usr/local/Cellar/php55/5.5.26/sbin:/usr/local/Cellar/php55/5.5.26/bin:/usr/local/Cellar/php55/5.5.26/sbin:/usr/local/Cellar/php55/5.5.26/bin:/usr/local/Cellar/php55/5.5.30/sbin:/usr/local/Cellar/php55/5.5.30/bin:/usr/local/sbin:/usr/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'LANG' => 'zh_CN.UTF-8'
+    'HOME' => '/Users/Rio-hl'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'LSCOLORS' => 'Gxfxcxdxbxegedabagacad'
+    'SHELL' => '/bin/zsh'
+    'MAIL' => '/var/mail/root'
+    'LOGNAME' => 'root'
+    'USER' => 'root'
+    'USERNAME' => 'root'
+    'SUDO_COMMAND' => '/usr/local/Cellar/php55/5.5.26/bin/php yii migrate'
+    'SUDO_USER' => 'Rio-hl'
+    'SUDO_UID' => '501'
+    'SUDO_GID' => '20'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1453778076.3668
+    'REQUEST_TIME' => 1453778076
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-04-12 17:18:47 [-][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'You should configure "log" component to use one or more database targets before executing this migration.' in /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/log/migrations/m141106_185632_log_init.php:45
+Stack trace:
+#0 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/log/migrations/m141106_185632_log_init.php(53): m141106_185632_log_init->getDbTargets()
+#1 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(562): m141106_185632_log_init->up()
+#2 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m141106_185632_...')
+#3 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#4 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#7 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#8 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#9 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#10 /Users/Rio-hl/Documents/wwwroot/testlee/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 /Users/Rio-hl/Documents/wwwroot/testlee/yii(27): yii\base\Application->run()
+#12 {main}
+2016-04-12 17:18:43 [-][-][-][info][application] $_SERVER = [
+    'TMPDIR' => '/var/folders/mm/pb1b5vh9195g2lhs_nyn26k40000gn/T/'
+    'SECURITYSESSIONID' => '186a7'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.dAdzb4pWW1/Render'
+    'TERM_PROGRAM_VERSION' => '361.1'
+    'LANG' => 'zh_CN.UTF-8'
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'XPC_SERVICE_NAME' => '0'
+    'XPC_FLAGS' => '0x0'
+    'TERM_SESSION_ID' => '08AA9F62-FF7D-4328-B095-94B357032594'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.bk8lN8y3gT/Listeners'
+    'TERM' => 'xterm-256color'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0:0'
+    'SHELL' => '/bin/zsh'
+    'HOME' => '/Users/Rio-hl'
+    'LOGNAME' => 'Rio-hl'
+    'USER' => 'Rio-hl'
+    'PATH' => '/usr/local/sbin:/usr/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'SHLVL' => '1'
+    'PWD' => '/Users/Rio-hl/Documents/wwwroot/testlee'
+    'OLDPWD' => '/Users/Rio-hl'
+    'ZSH' => '/Users/Rio-hl/.oh-my-zsh'
+    'PAGER' => 'less'
+    'LESS' => '-R'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'LSCOLORS' => 'Gxfxcxdxbxegedabagacad'
+    '_' => '/usr/local/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1460452723.8307
+    'REQUEST_TIME' => 1460452723
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@yii/log/migrations/'
+    ]
+    'argc' => 3
+]

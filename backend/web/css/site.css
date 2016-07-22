@@ -1,0 +1,159 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    /*padding: 70px 15px 20px;*/
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+#switcher {
+    position: fixed;
+    right: -213px;
+    top: 80px; 
+    width: 250px;
+    z-index: 1000;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#switcher .toggle-btn {
+    float: left;
+    display: inline-block;
+    background: white;
+    border: 1px solid black;
+    border-right-width: 0;
+    color: black;
+    padding: 8px;
+    cursor: pointer; 
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#switcher .toggle-btn:hover {
+    background: #f2f2f2;
+}
+
+#switcher .content {
+    background: white;
+    color: black;
+    border: #444; 
+    width: 210px;
+    border: 1px solid black;
+    overflow: hidden;
+    margin-left: 39px;
+}
+
+#switcher.open {
+    right: 0; 
+}
+
+#switcher .content .inner {
+    padding: 10px;
+}
+
+#switcher .open .content select option {
+    font-size: 14px;
+}
+
+#switcher .color-container span {
+    display: inline-block;
+    width: 48%;
+    height: 30px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#post-thumbnail img{
+    width: 200px;
+    height: 160px;
+}
